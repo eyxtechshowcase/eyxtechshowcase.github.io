@@ -4,17 +4,167 @@
   <title>EYX Devolved Blockchain</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
-  <style>
-    .margin-top-3 {
-      margin-top: 3em;
-    }
-  </style>
 </head>
-<body class="container">
-  <h1>EYX Voting Application</h1>
-  <p>This is using Ethereum's test blockchain. You will not have to use real Ether to vote!</p>
-  <p>Access the smart contract at this address - https://ropsten.etherscan.io/address/0x8708935c0c1598c3e659163f4939322711d49780</p>
-  <p>To vote please install the Metamask plugin or Status if you are on a mobile</p>
+
+<body>
+  <!-- section scroll -->
+<!--
+  <div id="firstsection">
+  <a id="firstsection" class="smooth"></a>
+
+      <header id="header">
+        <h1>EYX Voting Application</h1>
+        <p>This is using Ethereum's test blockchain. You will not have to use real Ether to vote!</p>
+      </header>
+        <p>Access the smart contract at this address - https://ropsten.etherscan.io/address/0x8708935c0c1598c3e659163f4939322711d49780</p>
+        <p>To vote please install the Metamask plugin or Status if you are on a mobile</p>
+        <p>Receive test ether here - http://faucet.ropsten.be:3001/</p>
+	<section id="banner">
+			<header>
+				<h1>Hi, I’m Editorial<br />
+				by HTML5 UP</h1>
+				<p>A free and fully responsive site template</p>
+			</header>
+			<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+	</section>
+</div>
+-->
+
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inner">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand brand" href="#">EYX Devolved Voting</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#purpose">Purpose of this demo</a></li>
+            <li><a href="#participate">Participate</a></li>
+            <li><a href="#interact">Interact with a blockchain</a></li>
+            <li><a href="#smartcontract">Why a smart contract?</a></li>
+            <li><a href="#results">Voting results</a></li>
+          </ul>
+
+
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid">
+      <div class="more-space row">
+        <div class="col-md-12">
+          <div class="text-center intro">
+            <h1>Welcome to the EYX Blockchain Demo</h1>
+            <h4>Decentralised Voting in Your Browser</h4><h4 class="red">This is based on the Ethereum Blockchain</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+
+  <!--Purpose of the Demo---->
+    <div class="about-us" id="startchange">
+      <a name="purpose"></a>
+      <div class="break5 container-fluid">
+        <div class="row text-center">
+          <div class="descript col-xs-12 col-sm-12 col-md-12">
+            <h1>Purpose of this Demo</h1>
+            <p class="about-us-p">This is a demo of a live smart contract which has been deployed on Ethereum's test blockchain, you can vote for your local official on your phone or laptop securely</p>
+            <p class="about-us-p">The difficulty of the demo is medium. Some base understanding of blockchains are needed. Consider yourself a begineer? Click on the below to get up to speed</p>
+            <a href="https://www.youtube.com/watch?v=d3QGvjPYFAw" class="team">What is a blockchain?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--How do I partipate in a blockchain?---->
+      <div class="about-us" id="startchange">
+        <a name="participate"></a>
+          <div class="row text-center">
+            <div class="break3 container-fluid text-center">
+            <div class="descript col-xs-12 col-sm-12 col-md-12">
+              <div class="more-space row">
+              <h1>How do I partipate in this blockchain?</h1>
+              <p class="about-us-p">To vote please install the Metamask plugin or Status if you are on a mobile. These allow you to interact with decentralised applications (Dapps) like this one, without the need to download the blockchain behind this Smart Contract<br><br>Create an account on your Ethereum client</br></br>If you are able to see the figures on the current status of the Smart Contract then you are successfully interacting with the live blockchain</p>
+              <div class="table-responsive">
+            <table class="table table-bordered">
+              <tr>
+                <td>Tokens For Sale</td>
+                <td id="tokens-total"></td>
+              </tr>
+              <tr>
+                <td>Tokens Sold</td>
+                <td id="tokens-sold"></td>
+              </tr>
+              <tr>
+                <td>Price Per Token</td>
+                <td id="token-cost"></td>
+              </tr>
+              <tr>
+                <td>Balance in the contract</td>
+                <td id="contract-balance"></td>
+              </tr>
+            </table>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--The Smart Contract---->
+<div class="about-us" id="startchange">
+  <a name="interact"></a>
+    <div class="break4 container-fluid text-center">
+       <h3>Here is the current state of the blockchain</h3>
+         <div class="margin-top-3">
+       <h2>Purchase tokens here to vote</h2>
+       <div class="col-sm-12">
+         <div id="buy-msg"></div>
+         <input type="text" id="buy" class="col-sm-8" placeholder="Number of tokens to buy"/>&nbsp;
+         <a href="#" onclick="buyTokens()" class="btn btn-primary">Buy</a>
+       </div>
+     </div>
+     <div class="row margin-top-3">
+       <h2>Lookup voter info here once you have purchased tokens</h2>
+       <div class="col-sm-12">
+         <input type="text" id="voter-info", class="col-sm-8" placeholder="Enter the voter address" />&nbsp;
+         <a href="#" onclick="lookupVoterInfo()" class="btn btn-primary">Lookup</a>
+         <div class="voter-details row text-left">
+           <div id="tokens-bought" class="margin-top-3 col-md-12"></div>
+           <div id="votes-cast" class="col-md-12"></div>
+         </div>
+       </div>
+     </div>
+         <div class="container-fluid">
+           <h2>Vote for Candidate</h2>
+           <div id="msg"></div>
+           <input type="text" id="candidate" placeholder="Enter the candidate name"/>
+           <br>
+           <br>
+           <input type="text" id="vote-tokens" placeholder="Total no. of tokens to vote"/>
+           <br>
+           <br>
+           <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
+         </div>
+         <div class="more-space row">
+       </div>
+     </div>
+   </div>
+
+
+<!---
   <div class="col-sm-7 margin-top-3">
     <h2>Candidates</h2>
     <div class="table-responsive">
@@ -29,6 +179,7 @@
         </tbody>
       </table>
     </div>
+
     <div class="container-fluid">
       <h2>Vote for Candidate</h2>
       <div id="msg"></div>
@@ -41,82 +192,175 @@
       <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
     </div>
   </div>
-  <div class="col-sm-offset-1 col-sm-4 margin-top-3">
-    <div class="row">
-      <h2>Token Stats</h2>
-      <div class="table-responsive">
-        <table class="table table-bordered">
-          <tr>
-            <td>Tokens For Sale</td>
-            <td id="tokens-total"></td>
-          </tr>
-          <tr>
-            <td>Tokens Sold</td>
-            <td id="tokens-sold"></td>
-          </tr>
-          <tr>
-            <td>Price Per Token</td>
-            <td id="token-cost"></td>
-          </tr>
-          <tr>
-            <td>Balance in the contract</td>
-            <td id="contract-balance"></td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    <div class="row margin-top-3">
-      <h2>Purchase Tokens</h2>
-      <div class="col-sm-12">
-        <div id="buy-msg"></div>
-        <input type="text" id="buy" class="col-sm-8" placeholder="Number of tokens to buy"/>&nbsp;
-        <a href="#" onclick="buyTokens()" class="btn btn-primary">Buy</a>
-      </div>
-    </div>
-    <div class="row margin-top-3">
-      <h2>Lookup Voter Info</h2>
-      <div class="col-sm-12">
-        <input type="text" id="voter-info", class="col-sm-8" placeholder="Enter the voter address" />&nbsp;
-        <a href="#" onclick="lookupVoterInfo()" class="btn btn-primary">Lookup</a>
-        <div class="voter-details row text-left">
-          <div id="tokens-bought" class="margin-top-3 col-md-12"></div>
-          <div id="votes-cast" class="col-md-12"></div>
+--->
+
+<!--SERVICES---->
+
+  <div class="works">
+    <a name="smartcontract"></a>
+    <div class="container-fluid">
+      <div class="break7 container-fluid text-center">
+      <div class="row">
+        <div class="text-center col-xs-12 col-sm-12 col-md-12">
+          <h1>While you wait for the transaction to progress, read below on the utility of Smart Contracts</h1>
         </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="thumbnail">
+            <img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1465539592000/photosp/94879eae-3533-41ec-abe5-d584ba41b8fe/stock-photo-vote-election-voting-voting-booth-voting-booths-mall-voting-early-voting-94879eae-3533-41ec-abe5-d584ba41b8fe.jpg" class="img-responsive" />
+            <div class="caption">
+              <h3>Solves the problem with online voting</h3>
+              <p>Hackers will never be able to tamper with the whole blockchain, meaning it is non-changeable</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="thumbnail">
+            <img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1462281537000/photosp/811dcb4e-1754-4238-979b-8736cae5305a/stock-photo-field-grass-lawn-house-president-washington-white-house-presidential-811dcb4e-1754-4238-979b-8736cae5305a.jpg" class="img-responsive" />
+            <div class="caption">
+              <h3>Transparent outcomes</h3>
+              <p>Every participant can access the public vote record, you can access the above vote here</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="thumbnail">
+            <img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1465933313000/photosp/915da798-9fd2-4005-8c1a-5500fc5dd4a1/stock-photo-sign-politics-vote-campaign-election-voting-civics-civic-duty-vote-here-915da798-9fd2-4005-8c1a-5500fc5dd4a1.jpg" class="img-responsive" />
+            <div class="caption">
+              <h3>Cheaper elections</h3>
+              <p>Traditional methods of voting can cost taxpayers upwards of £5 per vote to facilitate. This application has the potential to be far cheaper</p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--
+      <div class="space row">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="thumbnail">
+            <img src="https://picjumbo.imgix.net/HNCK8236.jpg?q=40&w=1650&sharp=30" class="img-responsive" />
+            <div class="caption">
+              <h3>Install MetaMask or Mist</h3>
+              <p>The above allows you to interact with decentralised applications (Dapps) like this one, without the need to download the blockchain behind this Smart Contract</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="thumbnail">
+            <img src="https://picjumbo.imgix.net/HNCK7802.jpg?q=40&w=1650&sharp=30" class="img-responsive" />
+            <div class="caption">
+              <h3>Share-based Voting</h3>
+              <p>This DApp utilises share-based voting where the more shares you own, the more votes you get. In the Ethereum blockchain, these shares are usually called tokens</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="thumbnail">
+            <img src="https://picjumbo.imgix.net/HNCK7784.jpg?q=40&w=1650&sharp=30" class="img-responsive" />
+            <div class="caption">
+              <h3>Access Etherscan To See Progress</h3>
+              <p>This is the public ledger of the Blockchain</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+-->
+
+    </div>
+  </div>
+
+  <div class="break1 container-fluid text-center">
+    <a name="results"></a>
+     <h3>Voting Results</h3>
+         <div class="table-responsive">
+           <div class="col-sm-10 margin-top-3">
+             <h2>Candidates</h2>
+               <table class="table table-bordered">
+                 <thead>
+                   <tr>
+                     <th>Candidate</th>
+                     <th>Votes</th>
+                   </tr>
+                 </thead>
+                 <tbody id="candidate-rows">
+                 </tbody>
+               </table>
+             </div>
+     </div>
+   </div>
+
+
+  <div class="contact text-center">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+          <h1>CONTACT</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <h2>Connect with EYX at: </h2>
+          <p>eyx@uk.ey.com</p>
+          <br/>
+          <br/>
+        </div>
+
+      </div>
+
+      <div class="row social-media-row-1">
+
+        <div class="icon col-xs-6 col-sm-6 col-md-6">
+          <a href="https://www.facebook.com/tashfeen.choudhury"><i class="fa fa-facebook"></i></a>
+        </div>
+        <div class="icon col-xs-6 col-sm-6 col-md-6">
+          <a href="https://twitter.com/tashmchy"><i class="fa fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="icon col-xs-6 col-sm-6 col-md-6">
+          <a href="https://www.linkedin.com/profile/view?id=AAIAABms3KcBtc_riyoK4ki6aXd96vrrJ9KzI9k&trk=nav_responsive_tab_profile"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <div class="icon col-xs-6 col-sm-6 col-md-6">
+          <a href="https://github.com/tashfeenMustafa"><i class="fa fa-github"></i></a>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+<footer>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="text-center go-up-icon col-xs-12 col-sm-6 col-md-6">
+        <a href="#home"><i class="fa fa-angle-up"></i></a>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <p>Copyright To EYX. All Rights Decentralised</p>
       </div>
     </div>
   </div>
-  <div>
-  <section>
-                <header class="major">
-                  <h2>Why should voting be on a blockchain?</h2>
-                </header>
-                <div class="posts">
-                  <article>
-                    <a href="#" class="image"></a>
-                    <h3>Solves the problem with online voting</h3>
-                    <p>A blockchain-based voting application does not concern itself with the security of its internet connection, because any hacker with access to the terminal will not be able to affect other nodes.</p>
-                    <ul class="actions">
-                    </ul>
-                  </article>
-                  <article>
-                    <a href="#" class="image"></a>
-                    <h3>Transparent outcomes</h3>
-                    <p>Its ability to engage and manage a constituency is crucial to the future of society, not just to produce a transparent outcome but to encourage all people to participate in their communities.</p>
-                    <ul class="actions">
-                    </ul>
-                  </article>
-                  <article>
-                    <a href="#" class="image"></a>
-                    <h3>Cheaper elections</h3>
-                    <p>Traditional methods of voting can cost taxpayers upwards of £5 per vote to facilitate. This application has the potential to be far cheaper</p>
-                    <ul class="actions">
-                    </ul>
-                  </article>
-                </div>
-              </section>
-            </div>
+
+</footer>
+
 </body>
+
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
 <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
 <script src="app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>-->
 </html>

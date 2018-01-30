@@ -22242,6 +22242,52 @@ $( document ).ready(function() {
   Voting.setProvider(web3.currentProvider);
   populateCandidates();
 
+  var a = $( document );
+   a.click(function(e)
+   {
+       e.preventDefault();
+   });
+
+});
+
+$('a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html,body').animate({
+					scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			}
+		}
+	});
+
+/*
+$('.smooth').on('click', function() {
+    $.smoothScroll({
+        scrollElement: $('body'),
+        scrollTarget: '#' + this.id
+    });
+
+    return false;
+});
+*/
+
+$(document).ready(function() {
+  var scroll_start = 0;
+  var startchange = $('#startchange');
+  var offset = startchange.offset();
+  if (startchange.length) {
+    $(document).scroll(function() {
+      scroll_start = $(this).scrollTop();
+      if (scroll_start > offset.top) {
+        $(".navbar-default").css('background-color', '#c1292e');
+      } else {
+        $('.navbar-default').css('background-color', 'transparent');
+      }
+    });
+  }
 });
 
 
@@ -25428,7 +25474,7 @@ exports = module.exports = __webpack_require__(81)();
 
 
 // module
-exports.push([module.i, "body {\n  margin-left: 25%;\n  margin-right: 25%;\n  margin-top: 2%;\n  font-family: \"Open Sans\", sans-serif;\n}\n\nlabel {\n  display: inline-block;\n  width: 100px;\n}\n\ninput {\n  width: 500px;\n  padding: 5px;\n  font-size: 16px;\n}\n\nbutton {\n  font-size: 16px;\n  padding: 5px;\n}\n\nh1, h2 {\n  display: inline-block;\n  vertical-align: middle;\n  margin-top: 0px;\n  margin-bottom: 10px;\n}\n\nh2 {\n  color: #AAA;\n  font-size: 32px;\n}\n\nh3 {\n  font-weight: normal;\n  color: #AAA;\n  font-size: 24px;\n}\n\n.black {\n  color: black;\n}\n\n#balance {\n  color: black;\n}\n\n.hint {\n  color: #666;\n}\n", ""]);
+exports.push([module.i, "header {\n  background-color: #34262B;\n  background: no-repeat center center fixed;\n  background-color: darkblue;\n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover;\n}\n\n.more-space {\n  margin-bottom: 20%;\n}\n\ntd {\n  background-color: #4CAF50;\n  color: white;\n}\n\nheader h1 {\n  color: #fff;\n  font-size: 150px;\n}\n\nh1 {\n  font-family: \"Amatic SC\", sans-serif;\n}\n\n.break1, .break2, .contact h2, .contact h3, p, header h4 {\n  font-family: \"Coming Soon\", sans-serif;\n}\n\n.social-media {\n  margin-top: 7%;\n}\n\n.intro {\n  margin-top: 12%;\n}\n\nheader h4 {\n  color: #fff;\n  font-size: 28px;\n  font-weight: bold;\n}\n\n.red {\n  color: #c1292e;\n  font-weight: bold;\n}\n/**Navbar customs**/\n\nnav ul li {\n  font-size: 17px;\n  font-family: \"News Cycle\";\n}\n\n.about-us a {\n  font-family: \"News Cycle\", serif;\n}\n\n.navbar-brand {\n  font-size: 25px;\n  font-family: \"News Cycle\";\n  color: #fff;\n}\n\n.navbar-default {\n  background-color: #FDFFFC;\n  border: 0;\n}\n\n.navbar-default .navbar-brand {\n  margin-left: 5%;\n  color: #fff;\n}\n\n.navbar-default .navbar-brand:hover,\n.navbar-default .navbar-brand:focus {\n  color: #FDFFFC;\n  background-color: transparent;\n}\n\n\n.navbar-default .navbar-text {\n  color: #210A2A;\n}\n\n.navbar-default .navbar-nav > li > a {\n  color: white;\n  font-weight: bold;\n}\n\n.navbar-default .navbar-nav > li > a:hover,\n.navbar-default .navbar-nav > li > a:focus {\n  color: #F9F2F6;\n  background-color: transparent;\n  border-bottom: 1px solid #F9F2F6;\n}\n\n.navbar-default .navbar-nav > .active > a,\n.navbar-default .navbar-nav > .active > a:hover,\n.navbar-default .navbar-nav > .active > a:focus {\n  color: #F9F2F6;\n  background-color: #e7e7e7;\n}\n\n.navbar-default .navbar-nav > .disabled > a,\n.navbar-default .navbar-nav > .disabled > a:hover,\n.navbar-default .navbar-nav > .disabled > a:focus {\n  color: #F9F2F6;\n  background-color: transparent;\n}\n\n.navbar-default .navbar-toggle {\n  border-color: #ddd;\n}\n\n.navbar-default .navbar-toggle:hover,\n.navbar-default .navbar-toggle:focus {\n  background-color: #ddd;\n}\n\n.navbar-default .navbar-toggle .icon-bar {\n  background-color: #888;\n}\n\n.navbar-default .navbar-collapse,\n.navbar-default .navbar-form {\n  border-color: #e7e7e7;\n}\n\n.navbar-default .navbar-nav > .open > a,\n.navbar-default .navbar-nav > .open > a:hover,\n.navbar-default .navbar-nav > .open > a:focus {\n  color: #555;\n  background-color: #e7e7e7;\n}\n\n.navbar-inner {\n  background: rgba(0, 0, 0, 0);\n}\n/**Navbar customs end**/\n/***Services***/\n\n.works {\n}\n\n.tabs {\n  background-color: #F26430;\n  border: 1px solid #210A20;\n}\n\n.works p {\n  margin-top: 10%;\n}\n\n.works h1 {\n  font-size: 100px;\n  margin-top: 7%;\n  margin-bottom: 5%;\n}\n\n.thumbnail {\n  margin-bottom: 12%\n}\n\n.thumbnail:hover {\n  -webkit-box-shadow: 2px 2px 2px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */\n  -moz-box-shadow:    2px 2px 2px 1px #ccc;  /* Firefox 3.5 - 3.6 */\n  box-shadow:         2px 2px 2px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */\n}\n\n.space {\n  margin-bottom: 10%;\n}\n\n.break1 {\n  background: center center fixed;\n  background-color: lightblue;\n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover;\n}\n\n.break2 {\n  background: center center fixed;\n  background-color: darkblue;\n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover;\n}\n\n.break3 {\n  background: center center fixed;\n  background-color: #ffa500;\n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover;\n}\n\n.break4 {\n  background: center center fixed;\n  background-color: #fa8072;\n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover;\n}\n\n.break5 {\n  background: center center fixed;\n  background-color: #8fbc8f;\n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover;\n}\n\n.break7 {\n  background: center center fixed;\n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover;\n}\n\n.break7 h1 {\n  color: black;\n  font-weight: bold;\n  font-size: 35px;\n  margin-top: 15%;\n  margin-bottom: 15%;\n}\n\n.break2 h3 {\n  color: #fff;\n  font-weight: bold;\n  font-size: 70px;\n  margin-top: 15%;\n  margin-bottom: 15%;\n}\n\n.break5 h1 {\n  color: #fff;\n  font-weight: bold;\n  font-size: 70px;\n  margin-top: 15%;\n  margin-bottom: 15%;\n}\n\n.break4 h3 {\n  color: #fff;\n  font-weight: bold;\n  font-size: 70px;\n  margin-top: 15%;\n  margin-bottom: 15%;\n}\n\n\n.break4 h2 {\n  color: #fff;\n  font-weight: bold;\n  font-size: 35px;\n}\n\n.break1 h3 {\n  color: #fff;\n  font-weight: bold;\n  font-size: 70px;\n  margin-top: 15%;\n  margin-bottom: 15%;\n}\n\n.break1 h2 {\n  color: #fff;\n  font-size: 70px;\n}\n\n.break3 h1 {\n  color: #fff;\n  font-weight: bold;\n  font-size: 70px;\n  margin-top: 15%;\n  margin-bottom: 15%;\n}\n\n/**End of Services stylus***/\n/***About us****/\n\n.about-us {\n  background-color: #34262B;\n  font-family: \"Coming Soon\", sans-serif;\n}\n\n.about-us h1 {\n  color: #C1292E;\n  font-size: 100px;\n  margin-top: 7%;\n}\n\n.about-us-p {\n  font-size: 20px;\n  font-weight: bold;\n  color: #FDFFFC;\n  margin-left: 12%;\n  margin-right: 12%;\n  margin-top: 7%;\n  margin-bottom: 10%;\n}\n\n.descript {\n  margin-bottom: 15%;\n}\n\n.team {\n  margin-top: 25%;\n  border: 1px solid #FDFFFC;\n  padding: 20px 50px 20px 50px;\n  text-decoration: none;\n  color: #F9F2F6;\n}\n\n.team:hover {\n  text-decoration: none;\n  background: rgba(193, 41, 46, 0.4);\n  color: #F9F2F6;\n}\n/* Contact */\n\n.contact {\n  background-color: #c1292e;\n}\n\n.contact h1 {\n  font-size: 100px;\n  margin-top: 7%;\n}\n\n.social-media-row-1 {\n  margin-top: 10%;\n}\n\n.contact i {\n  font-size: 1000%;\n  padding: 20% 0% 20% 0%;\n}\n\n.contact .icon {\n  border: 1px solid black;\n}\n\n.icon a {\n  color: #fff;\n}\n\n.icon:hover {\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n/* Footer */\n\nfooter {\n  background-color: #34292b;\n}\n\n.go-up-icon i {\n  color: white;\n  font-size: 400%;\n  margin-top: 15%;\n  border: 1px solid white;\n  padding: 2% 4% 3% 4%;\n  border-radius: 10%;\n}\n\n.go-up-icon i:hover {\n  background-color: rgba(100, 100, 100, 0.3);\n}\n\nfooter p {\n  color: white;\n  padding-top: 37%;\n}\n\n@media screen and (max-width: 500px) {\n  header h1, .about-us h1, .works h1, .contact h1 {\n    font-size: 50px;\n    margin-bottom: 15%;\n  }\n\n  header h4 {\n    font-size: 20px;\n    margin-bottom: 15%;\n  }\n\n  .about-us-p {\n    font-size: 14px;\n  }\n\n  .contact i {\n    font-size: 500%;\n  }\n\n  .intro {\n  margin-top: 50%;\n  }\n}\n", ""]);
 
 // exports
 
